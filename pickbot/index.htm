@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>PICKBOT</title>
+		<link href="./style.css" rel="stylesheet" />
+		<script src="./lib/three.min.js"></script>
+		<script src="./lib/OrbitControls.js"></script>
+		<script src="./script.js"></script>
+		<script data-goatcounter="https://garspout-pickbot.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+	</head>
+	<body onload="init();">
+		<div id="sliders-container">
+			<div id="sliders">
+				forearm rotation
+				<input type="range" id="farmRot" min="-1" max="1" value="-0.2" step="0.1" onInput="bigFun()"/><br />
+				forearm drop
+				<input type="range" id="farmDrop" min="-0.1" max="0.1" value="-0.025" step="0.001" onInput="bigFun()"/><br />
+				forearm turntable
+				<input type="range" id="farmTurn" min="-1" max="1" value="-0.2" step="0.01" onInput="bigFun()"/><br />
+				speed <!-- <div id="yo"></div> -->
+				<input type="range" id="freq" min="1" max="30" value="8" step="0.1" onInput="bigFun()"/><br />
+				deviation amount
+				<input type="range" id="devMag" min="0" max="2" value="0.5" step="0.1" onInput="bigFun()"/><br />
+				deviation center
+				<input type="range" id="devShift" min="-0.1" max="0.03" value="0.03" step="0.01" onInput="bigFun()"/><br />
+				extension amount
+				<input type="range" id="extMag" min="0" max="1" value="0" step="0.1" onInput="bigFun()"/><br />
+				extension center
+				<input type="range" id="extShift" min="-0.1" max="0.1" value="0" step="0.01" onInput="bigFun()"/><br />
+				extension phase
+				<input type="range" id="extPhase" min="-1" max="1" value="0" step="0.1" onInput="bigFun()"/><br />
+				String hopping ... 1WPS ... Crosspicking
+				<input type="range" id="pickStyle" min="-1" max="1" value="0" step="1" onInput="bigFun()"/><br />
+			</div>
+		</div>
+		<div id="canvas"></div>
+		<div id="buttons-container">
+			<div id="props"><h3>
+				a tool to help understand pick hand technique for guitar</br>
+				check out <a href="https://troygrady.com/">troygrady.com</a>
+			</h3></div>
+			<div id="buttons">
+				presets<br />
+				<input type="button" value="string hopping" onclick="presetSH()"/><br />
+				<input type="button" value="supinated deviation" onclick="presetSD()"/><br />
+				<input type="button" value="supinated reverse dart thrower" onclick="presetSRDT()"/><br />
+				<input type="button" value="supinated cross picking" onclick="presetSCP()"/><br />
+				<input type="button" value="pronated deviation" onclick="presetPD()"/><br />
+				<input type="button" value="pronated dart thrower" onclick="presetPDT()"/><br />
+				<input type="button" value="pronated cross picking" onclick="presetPCP()"/><br />
+			</div>
+			<div id="howto"><h3>
+				click and drag to roll pickbot around, scroll to zoom</br>
+			</h3></div>
+		</div>
+		<div id="output">
+			<p id="insert"></p>
+		</div>
+	</body>
+</html>

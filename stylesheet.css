@@ -1,0 +1,43 @@
+#container {
+    width: 100%;
+}
+
+#MHimg {
+    display: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#logo {
+    display: none;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+
+#dualphin {
+    display: none;
+}
+
+#MHdiv {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+    background-image: url("./assets/fireworks-animated-gif-23.gif");
+    background-size: 0 0;
+}
+
+body {
+    background-image: url("./assets/night-sky-stars.gif");
+}
