@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+* {
+    touch-action: none;
+}
+
 section {
     position: absolute;
     background-color: white;

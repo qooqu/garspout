@@ -3,11 +3,13 @@ const bpm = document.querySelector("#bpm");
 
 const boxes = Array.from(document.querySelectorAll(".box"));
 // console.log(boxes);
-boxes.forEach((box) => box.addEventListener("mouseenter", handleEnter));
-
-// const midBox = document.querySelector("#midBox");
-// console.log(midBox);
-// midBox.addEventListener("mouseenter", handleEnter);
+// boxes.forEach((box) => box.addEventListener("mouseenter", handleEnter));
+boxes.forEach((box) =>
+    box.addEventListener("pointerdown", (e) => {
+        box.releasePointerCapture(e.pointerId);
+    })
+);
+boxes.forEach((box) => box.addEventListener("pointerenter", handleEnter));
 
 // function beep() {
 //     var snd = new Audio(
@@ -28,10 +30,11 @@ function handleEnter(e) {
     if (e.target.id == prevBox) {
         return;
     }
+    console.log(e.target.id);
     // beep();
     prevBox = e.target.id;
     count++;
-    console.log(count);
+    // console.log(count);
     now = Date.now();
     dts.push(now - then);
     if (dts.length == numDts + 1) {
