@@ -34,10 +34,10 @@
     margin: auto;
     text-align: center;
     z-index: 2;
-    background-image: url("./assets/fireworks-animated-gif-23.gif");
+    background-image: url("https://www.greenwold.com/garspout-assets/fireworks-animated-gif-23.gif");
     background-size: 0 0;
 }
 
 body {
-    background-image: url("./assets/night-sky-stars.gif");
+    background-image: url("https://www.greenwold.com/garspout-assets/night-sky-stars.gif");
 }
