@@ -20,9 +20,9 @@ section {
     position: fixed;
     background-color: white;
     opacity: 0.5;
-    margin: 3vh;
-    padding: 3vh;
-    border-radius: 1vh;
+    margin: 3vw;
+    padding: 3vw;
+    border-radius: 1vw;
 }
 
 @media (max-width: 650px) {
